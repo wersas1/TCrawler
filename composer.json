@@ -13,8 +13,8 @@
         }
     ],
     "require": {
-        "php": ">=8.0",
-        "laravel/framework": ">=8.0.2",
+        "php": ">=8.0.2",
+        "laravel/framework": ">=8.0",
         "guzzlehttp/guzzle": ">=7.5",
         "fabpot/goutte": ">=4.0"
     },
