@@ -11,7 +11,7 @@ class CrwalerService
 
     private $channelName;
 
-    const BASEURL = "https://t.me/s/";
+    const BASEURL = "https://t.me/";
 
     public function __construct(string $channelName, string $httpProxy = null)
     {
