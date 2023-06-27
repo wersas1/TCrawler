@@ -3,7 +3,7 @@
 namespace Mfarahani\TCrawl\Services\Crawl;
 
 use Goutte\Client;
-use GuzzleHttp\Client as GuzzleHttpClient;
+use GuzzleHttp\Client as GuzzleClient;
 
 class CrwalerService
 {
@@ -24,8 +24,8 @@ class CrwalerService
 
     private function connect()
     {
-
-        $this->client = new Client(GuzzleHttpClient::create(['timeout' => 60,  'proxy' => $this->httpProxy]));
+        $guzzle=new GuzzleClient(['timeout' => 60, 'verify' => false, 'proxy' => $this->httpProxy]);
+        $this->client = new Client($guzzle);
     }
 
     private function setChannel()
