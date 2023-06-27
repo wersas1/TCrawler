@@ -3,7 +3,7 @@
 namespace Mfarahani\TCrawl\Services\Crawl;
 
 use Goutte\Client;
-use GuzzleHttp\Client as GuzzleClient;
+use Symfony\Component\HttpClient\HttpClient;
 
 class CrwalerService
 {
@@ -24,9 +24,7 @@ class CrwalerService
 
     private function connect()
     {
-        $guzzle=new GuzzleClient(['timeout' => 60, 'verify' => false, 'proxy' => $this->httpProxy]);
-        $this->client = new Client();
-        $this->client->setClient($guzzle);
+        $this->client = new Client(HttpClient::create['timeout' => 60, 'verify' => false, 'proxy' => $this->httpProxy]);
     }
 
     private function setChannel()
