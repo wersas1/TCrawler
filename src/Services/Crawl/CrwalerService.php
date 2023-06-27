@@ -25,7 +25,8 @@ class CrwalerService
     private function connect()
     {
         $guzzle=new GuzzleClient(['timeout' => 60, 'verify' => false, 'proxy' => $this->httpProxy]);
-        $this->client = new Client($guzzle);
+        $this->client = new Client();
+        $goutteClient->setClient($guzzle);
     }
 
     private function setChannel()
