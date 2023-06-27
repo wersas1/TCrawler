@@ -6,12 +6,17 @@
         {
             "name": "Mohsen Farahani",
             "email": "dev.farahani@gmail.com"
+        },
+        {
+            "name": "Wersas",
+            "email": "wersas1@gmail.com"
         }
     ],
     "require": {
-        "php": ">=7.1",
-        "laravel/framework": ">=5",
-        "guzzlehttp/guzzle": ">=6"
+        "php": ">=8.0",
+        "laravel/framework": ">=8.0.2",
+        "guzzlehttp/guzzle": ">=7.5",
+        "fabpot/goutte": ">=4.0"
     },
     "autoload": {
         "psr-4": {
